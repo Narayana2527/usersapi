@@ -14,7 +14,9 @@ app.use(bodyParser.json());
 
 // Routes
 app.use("/api/user", userRoutes);
+app.get('/', (req, res) => {
+    res.status(200).json({ message: "API is working fine!" });
+});
 
-const PORT = process.env.PORT || 4000; 
-app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
+module.exports = app;
 

@@ -59,9 +59,6 @@ module.exports ={
         } catch (error) {
             res.status(500).json({ message: "Server error", error });
         }
-    },
-    home:async(req,res)=>{
-        res.status(200).json({message:"Welcome to server"})
     }
     
 }
